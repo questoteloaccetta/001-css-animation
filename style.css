@@ -1,0 +1,40 @@
+body{
+  background-image: url(mb.jpeg);
+  background-size: cover;
+  min-height: 100vh;
+}
+  
+  .mario-game{
+    position:absolute;
+    width: 150px;
+    left:10%;
+    top:30%;
+    /*
+      infinite -> LOOP 
+      Forawrds -> It stops at the end
+    */
+    animation: marioAnimation 8s infinite;
+  }
+  
+  .mario-game img{
+    width: 100%;
+  }
+  
+  @keyframes marioAnimation{
+    0%{
+      left:10%;
+      top:30%;
+      transform: rotate(30deg);
+    }
+    30%{
+      left:20%;
+      top:70%;
+      transform: rotate(-30deg);
+  
+    }
+    100%{
+      left:10%;
+      transform: rotate(30deg);
+      top:30%;
+    }
+  }
